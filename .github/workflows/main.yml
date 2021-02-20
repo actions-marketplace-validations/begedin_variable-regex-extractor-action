@@ -1,0 +1,18 @@
+on: [pull_request]
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    name: A job to test extraction
+    steps:
+    - name: Extract variable
+      id: extract
+      uses: actions/variable-regex-extractor-action
+      with: 
+        pattern: `verification:([^\s]*)`
+    - name: On matched
+      if: steps.extract.value == 'matched'
+      run: exit 0
+    - name: On unmatched
+      if: steps.extract.value !== 'matched'
+      run: exit 1
