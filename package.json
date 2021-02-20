@@ -1,6 +1,6 @@
 {
-  "name": "variable-regex-extractor-action",
-  "version": "0.2.0",
+  "name": "Regex Variable Extractor,
+  "version": "0.2.1",
   "description": "Github action to extract a variable from a pull request",
   "main": "lib/main.js",
   "scripts": {
