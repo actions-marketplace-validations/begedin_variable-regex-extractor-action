@@ -4,10 +4,9 @@ inputs:
   pattern:  # Regex pattern
     description: 'Pattern used to extract the variable'
     required: true
-    default: ''
 outputs:
   value: # id of output
-    description: 'Matched variable, or null'
+    description: 'Matched variable'
 runs:
   using: 'node12'
   main: 'dist/index.js'
