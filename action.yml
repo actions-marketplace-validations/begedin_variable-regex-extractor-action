@@ -1,5 +1,5 @@
-name: 'Variable Extractor'
-description: 'Extract Variable Using Regex'
+name: 'Regex Extractor'
+description: 'Extract a variable from PR description using Regex'
 branding: 
   icon: x
   color: purple
