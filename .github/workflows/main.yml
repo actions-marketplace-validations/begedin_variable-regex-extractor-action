@@ -1,18 +1,24 @@
 on: [pull_request]
 
+
 jobs:
   verification:
     runs-on: ubuntu-latest
     name: A job to test extraction
     steps:
+    - name: Check out current branch
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
     - name: Extract variable
       id: extract
-      uses: actions/variable-regex-extractor-action
-      with: 
-        pattern: `verification:([^\s]*)`
+      uses: ./
+      with:
+        pattern: |
+          `verification:([^\s]*)`
     - name: On matched
-      if: steps.extract.value == 'matched'
+      if: steps.extract.outputs.value == 'matched'
       run: exit 0
     - name: On unmatched
-      if: steps.extract.value !== 'matched'
+      if: steps.extract.outputs.value != 'matched'
       run: exit 1

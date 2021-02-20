@@ -1,7 +1,7 @@
 {
   "name": "variable-regex-extractor-action",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.2.0",
+  "description": "Github action to extract a variable from a pull request",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -16,7 +16,7 @@
   },
   "keywords": [],
   "author": "Nikola Begedin",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/begedin/variable-regex-extractor-action/issues"
   },
