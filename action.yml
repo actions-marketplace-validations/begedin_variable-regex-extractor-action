@@ -1,5 +1,7 @@
 name: 'Variable Extractor'
 description: 'Extract Variable Using Regex'
+icon: x
+color: purple
 inputs:
   pattern:  # Regex pattern
     description: 'Pattern used to extract the variable'
